@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Water Quality Analysis</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+        html,
+        body {
+            justify-content: center;
+            height: cover;
+        }
+        
+        body,
+        div,
+        form,
+        input,
+        select,
+        p {
+            padding: 10px;
+            margin: 0;
+            outline: none;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 16px;
+            color: black;
+        }
+        
+        h1,
+        h2 {
+            padding: 10px 0;
+            font-size: 32px;
+            font-weight: 300;
+            text-align: center;
+        }
+        
+        h2 {
+            margin: 0 0 0 8px;
+        }
+        
+        .main-block {
+            max-width: cover;
+            min-height: cover;
+            padding: 10px 0;
+            margin: cover;
+            border-radius: cover;
+            border: solid cover;
+            background: white;
+        }
+        
+        .left-part,
+        form {
+            padding: 10px;
+        }
+        
+        .left-part {
+            text-align: center;
+        }
+        
+        .fa-graduation-cap {
+            font-size: 72px;
+        }
+        
+        form {
+            background: pink;
+        }
+        
+        form {
+            margin: 0 30px;
+        }
+        
+        .title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .info {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        input {
+            padding: 5px;
+            margin-bottom: 30px;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #eee;
+        }
+        
+        input::placeholder {
+            color: black;
+        }
+        
+        option:focus {
+            border: none;
+        }
+        
+        option {
+            background: black;
+            border: none;
+        }
+        
+        .btn-item,
+        button {
+            padding: 10px 5px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: none;
+            background: #26a9e0;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 400;
+            color: #fff;
+        }
+        
+        .btn-item {
+            display: inline-block;
+            margin: 20px 5px 0;
+        }
+        
+        button {
+            width: 100%;
+        }
+        
+        button:hover,
+        .btn-item:hover {
+            background: #85d6de;
+        }
+        
+        @media (min-width: 568px) {
+            html,
+            body {
+                height: 100%;
+            }
+            .main-block {
+                flex-direction: row;
+                height: calc(100% - 50px);
+            }
+            .left-part,
+            form {
+                flex: 1;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-block">
+        <div class="left-part">
+
+            <h1>Efficient Water Quality Analysis Platform</h1>
+            <p>
+
+        </div>
+        <form action="{{ url_for('login') }}" method="post">
+            <div class="title">
+                <i class="fas fa-pencil-alt"></i>
+                <h2>Enter the details:</h2>
+            </div>
+            <div class="info">
+                <input class="fname" type="text" name="station" placeholder="StationID" required>
+                <input type="text" name="loc" placeholder="Location" required>
+                <input type="text" name="state" placeholder="State" required>
+                <input type="text" name="temp" placeholder="Temperature" required>
+                <input type="text" name="do" placeholder="Dissolved Oxygen(mg/l)" required>
+                <input type="text" name="ph" placeholder="PH Value" required>
+                <input type="text" name="co" placeholder="Conductivity" required>
+                <input type="text" name="bod" placeholder="B.O.D.(mg/l)" required>
+                <input type="text" name="na" placeholder="Nitratenan N + Nitritenann(mg/l)" required>
+                <input type="text" name="tc" placeholder="Total Coliform(MPN/100ml)Mean" required>
+                <input type="text" name="year" placeholder="Year" required>
+            </div>
+
+            <button type="submit" href="#">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
